@@ -1,16 +1,1 @@
-// Minimal API - Giriş ve Swagger Kullanımı
-
-var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-var app = builder.Build();
-
-app.UseSwagger();
-app.UseSwaggerUI(c =>
-{
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Minimal API V1");
-});
-
-app.MapGet("/", () => "Hello World !");
-app.Run();
+Minimal API‘ler, .NET 6 ile birlikte gelen, minimum bağımlılıkla HTTP API’leri oluşturmak için tasarlandı. ASP.NET Core‘da yalnızca minimum dosyaları, özellikleri ve bağımlılıkları dahil etmek isteyen mikro hizmetler ve uygulamalar için idealdirler.
