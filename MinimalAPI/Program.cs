@@ -12,6 +12,9 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+//appsettings.json dosyasından JWT'yi okuduk.
+app.Logger.LogInformation($"{app.Configuration["JWT:Key"]}");
+
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
